@@ -1,0 +1,5 @@
+# mcp-workplace only — deliberately NOT the shared requirements.mcp.txt, which pulls in
+# whisper, docling and torch this server never uses.
+mcp>=1.10,<2   # 2.x renamed FastMCP; mcp_servers/_core still uses the 1.x API
+httpx
+uvicorn

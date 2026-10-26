@@ -16,7 +16,7 @@ from __future__ import annotations
 # ── UI ───────────────────────────────────────────────────────────
 UI_PORT = 3001
 
-# ── MCP servers (29100–29107) ────────────────────────────────────
+# ── MCP servers (29100–29108) ────────────────────────────────────
 MCP_WEB_PORT            = 29100
 MCP_KNOWLEDGE_PORT      = 29101
 MCP_GEO_PORT            = 29102
@@ -25,6 +25,9 @@ MCP_CODE_PORT           = 29104
 MCP_LOCAL_PORT          = 29105
 MCP_TEXT_PORT           = 29106
 MCP_INVOCABLE_APIS_PORT = 29107
+# Authenticated (bearer token) and holds Slack/Box credentials, so it is deliberately NOT in
+# MCP_PORTS: run_all.py and the public smoke tests start/probe every server listed there.
+MCP_WORKPLACE_PORT      = 29108
 
 MCP_PORTS: dict[str, int] = {
     "web":            MCP_WEB_PORT,
